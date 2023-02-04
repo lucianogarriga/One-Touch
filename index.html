@@ -1,28 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>One Touch - Tienda Online</title>
-    <!-- CSS only -->
+    <title>One Touch - Tienda Online</title> 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
-
-    
     <header class="container-fluid bg-dark top-0">
         <ul class="nav nav-pills mb-3 py-3 container" id="pills-tab" role="tablist">
             <li class="nav-item" role="presentation">
-                <button class="nav-link " id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+                <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
                     type="button" role="tab" aria-controls="pills-home" aria-selected="true">Home</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="pills-profile-tab" data-bs-toggle="pill"
+                <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
                     data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
                     aria-selected="false">Productos</button>
             </li>
@@ -33,50 +29,37 @@
         </ul>
     </header>
 
-    <div class="alert container  top-0 alert-primary hide" role="alert">
+    <div class="alert container alert-primary hide" role="alert">
         El producto ha sido agregado al carrito!
     </div>
     <div class="tab-content" id="pills-tabContent">
         <div class="tab-pane fade" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-            
-
             <section class="hero">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-4">
-                           
-                            
                         </div>
                     </div>
                 </div>
-                
             </section>
-
         </div>
         
         <div class="tab-pane fade show active container" id="pills-profile" role="tabpanel"
             aria-labelledby="pills-profile-tab">
 
             <p id="welcome"> - BIENVENIDO A LA TIENDA VIRTUAL DE ONE TOUCH - <br> Aceptamos todos los medios de pago: a) Efectivo, b) Tarjetas, c) Criptomonedas</p>
-
             <div class="botones">
-            <button id="hide" class="btn-primary "> Ocultar</button>
-            <button id="show" class="btn-primary"> Mostrar</button>
-            <button id="toggle" class="btn-primary"> Interactuar banner</button>
-    
-    
-            
-    
+                <!-- <button id="hide" class="btn-primary "> Ocultar</button>
+                <button id="show" class="btn-primary"> Mostrar</button> -->
+                <button id="toggle" class="btn-primary"> Interactuar banner</button>        
             </div>
-            <h2 class="h4 m-4 text-primary"> Productos</h2>
+            <h2 class="text-primary text-center"> Productos</h2>
             <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4">
-
-                <div class="col d-flex justify-content-center-mb-4">
+                <div class="justify-content-center">
                     <div class="card shadow mb-1 bg-dark rounded" style="width: 20rem;">
                         <h5 class="card-title pt-2 text-center text-primary">PC COMBO 1</h5>
                         <img src="./img/3.png" class="card-img-top" alt="...">
                         <div class="card-body">
-
                             <p class="card-text text-white-50 description">Kit Oficina + AMD A10 9700 + Fuente 550w + Mother A320 + SSD 120GB + 8GB Ram</p>
                             <h5 class="text-primary"> Precio: <span class="precio"> $ 36900</span></h5>
                             <div class="d-grid gap-2">
@@ -91,7 +74,6 @@
                         <h5 class="card-title pt-2 text-center text-primary">PC COMBO 2</h5>
                         <img src="./img/4.png" class="card-img-top" alt="...">
                         <div class="card-body">
-
                             <p class="card-text text-white-50 description">AMD A10 9700 + Fuente 500w 80 Plus + A320 + SSD 120GB + 8GB Ram</p>
                             <h5 class="text-primary"> Precio: <span class="precio"> $ 38000</span></h5>
                             <div class="d-grid gap-2">
@@ -106,7 +88,6 @@
                         <h5 class="card-title pt-2 text-center text-primary">PC COMBO 3</h5>
                         <img src="./img/5.png" class="card-img-top" alt="...">
                         <div class="card-body">
-
                             <p class="card-text text-white-50 description">Ryzen 3 2200g PRO + Fuente 500w 80 Plus + Mother A320 + SSD 120GB + 8GB Ram</p>
                             <h5 class="text-primary"> Precio: <span class="precio"> $ 43000</span></h5>
                             <div class="d-grid gap-2">
@@ -121,7 +102,6 @@
                         <h5 class="card-title pt-2 text-center text-primary">PC COMBO 4</h5>
                         <img src="./img/6.png" class="card-img-top" alt="...">
                         <div class="card-body">
-
                             <p class="card-text text-white-50 description">Ryzen 3 2200g PRO + Fuente 500w 80 Plus + Mother A320 + SSD 120GB + 8GB Ram</p>
                             <h5 class="text-primary"> Precio: <span class="precio"> $ 44500</span></h5>
                             <div class="d-grid gap-2">
@@ -136,7 +116,6 @@
                         <h5 class="card-title pt-2 text-center text-primary">PC COMBO 5</h5>
                         <img src="./img/7.png" class="card-img-top" alt="...">
                         <div class="card-body">
-
                             <p class="card-text text-white-50 description">Ryzen 3 2200g PRO + Fuente 550w 80 Plus + Mother A320 + SSD 480GB + 16GB Ram</p>
                             <h5 class="text-primary"> Precio: <span class="precio"> $ 48500</span></h5>
                             <div class="d-grid gap-2">
@@ -151,7 +130,6 @@
                         <h5 class="card-title pt-2 text-center text-primary">PC COMBO 6</h5>
                         <img src="./img/8.png" class="card-img-top" alt="...">
                         <div class="card-body">
-
                             <p class="card-text text-white-50 description">Ryzen 3 2200g + Fuente 550w 80 Plus + Mother A320 + SSD 120GB y HDD 1TB + 16GB Ram</p>
                             <h5 class="text-primary"> Precio: <span class="precio"> $ 52800</span></h5>
                             <div class="d-grid gap-2">
@@ -161,13 +139,9 @@
                     </div>
                 </div>
             </div>
-
         </div>
 
-
-
         <div class="tab-pane fade carrito" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
-
             <table class="table table-dark table-hover">
                 <thead>
                     <tr class="text-primary">
@@ -179,7 +153,6 @@
                 </thead>
                 <tbody class="tbody">
                     <tr>
-    
                     </tr>
                 </tbody>
             </table>
@@ -191,36 +164,28 @@
                 <div class="col d-flex justify-content-end">
                     <button class="btn btn-primary compra"> Comprar</button>
                 </div>
-  
+
             </div>
             <div class="alert2 container m-3 p-3 top-0 alert-primary hide" role="alert">
-                Gracias por tu compra! Comunicate con nosotros a traves del siguiente boton <a href="https://wa.me/5493513164119?text=¡Estoy+interesado!"><button class="btn btn-success"> Whatsapp</button></a>
+                Gracias por tu compra! Comunicate con nosotros a traves del siguiente boton <a href="https://wa.me/549353287412?text=¡Estoy+interesado!"><button class="btn btn-success"> Whatsapp</button></a>
             </div>
-            
+
             <br><br>
             <h2 id="api"> Vas a pagar con Criptomonedas? <br> Consulta la cotizacion en tiempo real!</h2>
-
             <h2 id="title1">Precio de Bitcoin (BTC)
                 <div id="btc"></div></h2>
-
             <h2 id="title1">Precio de Ethereum (ETH)
                 <div id="eth"></div></h2>
-             
             <h2 id="title1">Precio de Cardano (ADA) 
-                <div id="ada"></div></h2>
-
-            
+                <div id="ada"></div></h2>            
         </div>
     </div>
 
-
-    <script src="https://code.jquery.com/jquery-3.6.0.js"
-        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-
     <script src="./js/scripts.js"></script>
 </body>
 

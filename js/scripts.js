@@ -17,22 +17,22 @@ function addToCarritoItem(e) {
     const itemTitle = item.querySelector('.card-title').textContent
     const itemPrecio = item.querySelector('.precio').textContent
     const itemImg = item.querySelector('.card-img-top').src
-    
+
     const newItem = {
         title: itemTitle,
         precio: itemPrecio,
         img: itemImg,
         cantidad: 1
     }
-        addLocalStorage()
-        addItemCarrito(newItem)
+    addLocalStorage()
+    addItemCarrito(newItem)
 }
 
 function addItemCarrito(newItem) {
 
     const alert = document.querySelector('.alert')
 
-    setTimeout( function(){
+    setTimeout(function () {
         alert.classList.add('hide')
     }, 2000)
     alert.classList.remove('hide')
@@ -40,10 +40,10 @@ function addItemCarrito(newItem) {
     const InputElemento = tbody.getElementsByClassName('input__elemento')
 
     for (let i = 0; i < carrito.length; i++) {
-        if( carrito[i].title.trim() === newItem.title.trim()){
-            carrito[i].cantidad ++;
+        if (carrito[i].title.trim() === newItem.title.trim()) {
+            carrito[i].cantidad++;
             const inputValue = InputElemento[i]
-            inputValue.value ++;
+            inputValue.value++;
             CarritoTotal()
             return null
         }
@@ -52,14 +52,14 @@ function addItemCarrito(newItem) {
     carrito.push(newItem)
     addLocalStorage()
     renderCarrito()
-    
+
     CarritoTotal()
 
 }
 
 function renderCarrito() {
     tbody.innerHTML = ''
-    
+
     carrito.map(item => {
         const tr = document.createElement('tr')
         tr.classList.add('ItemCarrito')
@@ -77,38 +77,38 @@ function renderCarrito() {
                 <button class="delete btn btn-danger">x</button>
             </td>
         `
-    tr.innerHTML = Content;
-    tbody.append(tr)
+        tr.innerHTML = Content;
+        tbody.append(tr)
 
-    tr.querySelector('.delete').addEventListener('click', removeItemCarrito)
-    tr.querySelector('.input__elemento').addEventListener('change', sumarCantidad)
-    
-})
+        tr.querySelector('.delete').addEventListener('click', removeItemCarrito)
+        tr.querySelector('.input__elemento').addEventListener('change', sumarCantidad)
+
+    })
 }
 
 
-function CarritoTotal(){
+function CarritoTotal() {
     let Total = 0;
     const itemCartTotal = document.querySelector('.itemCartTotal')
-    carrito.forEach((item) =>{
+    carrito.forEach((item) => {
         const precio = Number(item.precio.replace("$", ''))
-        Total = Total + precio*item.cantidad
+        Total = Total + precio * item.cantidad
     })
 
     itemCartTotal.innerHTML = `Total $${Total}`
-    
+
     sumarCantidad()
-    
+
     CarritoTotal()
 }
 
-function removeItemCarrito(e){
+function removeItemCarrito(e) {
     const buttonDelete = e.target
     const tr = buttonDelete.closest('.ItemCarrito')
     const title = tr.querySelector('.title').textContent;
-    for(let i=0; i<carrito.length; i++){
-        if(carrito[i].title.trim() === title.trim()){
-            carrito.splice(i,1)
+    for (let i = 0; i < carrito.length; i++) {
+        if (carrito[i].title.trim() === title.trim()) {
+            carrito.splice(i, 1)
         }
     }
     tr.remove()
@@ -123,7 +123,7 @@ function vaciarCarrito() {
     carrito = [];
     const alert2 = document.querySelector('.alert2')
 
-    setTimeout( function(){
+    setTimeout(function () {
         alert2.classList.add('hide')
     }, 12000)
     alert2.classList.remove('hide')
@@ -137,40 +137,41 @@ function vaciarCarrito() {
 
 botonVaciar.addEventListener('click', vaciarCarrito);
 
-function sumarCantidad(e){
+function sumarCantidad(e) {
     const sumaInput = e.target
     const tr = sumaInput.closest('.ItemCarrito')
     const title = tr.querySelector('.title').textContent;
     carrito.forEach(item => {
-       if(item.title.trim() === title) {item.cantidad = sumaInput.value;
-        addLocalStorage()
-        CarritoTotal()
+        if (item.title.trim() === title) {
+            item.cantidad = sumaInput.value;
+            addLocalStorage()
+            CarritoTotal()
         }
     })
 }
 
-function addLocalStorage(){
+function addLocalStorage() {
     localStorage.setItem('.carrito', JSON.stringify(carrito))
 }
 
-window.onload = function(){
+window.onload = function () {
     const storage = JSON.parse(localStorage.getItem('.carrito'));
-    if(storage){
+    if (storage) {
         carrito = storage;
         renderCarrito()
     }
 }
 
-$(document).ready(function(){
-     $("#hide").click(function(){
-         $("p").hide();
-     });
+$(document).ready(function () {
+    $("#hide").click(function () {
+        $("p").hide();
+    });
 
-     $("#show").click(function(){
-         $("p").show();
-     });
+    $("#show").click(function () {
+        $("p").show();
+    });
 
-    $("#toggle").click(function(){
+    $("#toggle").click(function () {
         $("p").toggle();
     });
 });
@@ -179,7 +180,7 @@ $(document).ready(function(){
 
 // ACA VAN LOS PARAMETROS DE LA API DE COINBASE PARA CONSULTAR VALOR CRIPTOMONEDAS //
 
-$ ( () => {
+$(() => {
     const URL = 'https://api.coinbase.com/v2/prices/BTC-USD/buy'
 
     $.get(URL, (response, status) => {
@@ -193,7 +194,7 @@ $ ( () => {
     })
 })
 
-$ ( () => {
+$(() => {
     const URL = 'https://api.coinbase.com/v2/prices/ETH-USD/buy'
 
     $.get(URL, (response, status) => {
@@ -207,7 +208,7 @@ $ ( () => {
     })
 })
 
-$ ( () => {
+$(() => {
     const URL = 'https://api.coinbase.com/v2/prices/ADA-USD/buy'
 
     $.get(URL, (response, status) => {

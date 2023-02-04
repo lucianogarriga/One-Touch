@@ -1,6 +1,5 @@
 body{
-    background-color: #110f0fea
-    ;
+    background-color: #110f0fea;
 }
 
 headerm .alert{
@@ -96,4 +95,16 @@ headerm .alert2{
     left: 2rem;
     align-content: center;
     text-align: center;
+}
+
+.alert{
+    position: fixed;
+    top: 5vh;
+    left: 5vh;
+    width: 80%;
+    z-index: 1;
+}
+#toggle{
+    align-items: center;
+    align-content: center;
 }
