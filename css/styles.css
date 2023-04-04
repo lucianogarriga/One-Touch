@@ -108,3 +108,6 @@ headerm .alert2{
     align-items: center;
     align-content: center;
 }
+.row{
+    --bs-gutter-x: 0rem;
+}
